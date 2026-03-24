@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e4e2e1",
+              "surface": "#fbf9f8",
+              "on-tertiary-container": "#2e2e2b",
+              "on-background": "#1b1c1c",
+              "on-secondary-fixed-variant": "#41493a",
+              "error-container": "#ffdad6",
+              "outline-variant": "#d4c2c2",
+              "surface-tint": "#7c5454",
+              "outline": "#827473",
+              "on-primary": "#ffffff",
+              "primary-container": "#b88a8a",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#613d3d",
+              "inverse-on-surface": "#f3f0f0",
+              "inverse-surface": "#303030",
+              "inverse-primary": "#edbaba",
+              "surface-container": "#f0eded",
+              "tertiary": "#5f5e5b",
+              "on-tertiary-fixed-variant": "#474743",
+              "on-secondary-container": "#5d6555",
+              "on-primary-container": "#452526",
+              "on-tertiary-fixed": "#1c1c19",
+              "tertiary-fixed-dim": "#c9c6c2",
+              "tertiary-container": "#979591",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#e5e2dd",
+              "primary": "#7c5454",
+              "on-surface": "#1b1c1c",
+              "on-tertiary": "#ffffff",
+              "surface-dim": "#dcd9d9",
+              "on-secondary-fixed": "#161e11",
+              "surface-container-high": "#eae8e7",
+              "primary-fixed": "#ffdad9",
+              "secondary-fixed-dim": "#c1cab5",
+              "primary-fixed-dim": "#edbaba",
+              "secondary": "#586151",
+              "surface-container-highest": "#e4e2e1",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface-variant": "#504444",
+              "secondary-fixed": "#dde6d1",
+              "background": "#fbf9f8",
+              "surface-bright": "#fbf9f8",
+              "on-primary-fixed": "#2f1314",
+              "secondary-container": "#dae3ce",
+              "surface-container-low": "#f6f3f2"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-underline {
+            text-decoration: none;
+            position: relative;
+        }
+        .editorial-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0.4;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+            font-family: 'Manrope', sans-serif;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background antialiased">
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-serif text-2xl font-bold tracking-tighter text-rose-900" href="/">AL-LATIF</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-serif text-lg tracking-tight select-none text-neutral-600 font-medium pb-1 hover:text-rose-700 transition-colors duration-300" href="#">Collections</a>
+<a class="font-serif text-lg tracking-tight select-none text-rose-900 font-semibold border-b border-rose-900 pb-1 hover:text-rose-700 transition-colors duration-300" href="#">New Arrivals</a>
+<a class="font-serif text-lg tracking-tight select-none text-neutral-600 font-medium pb-1 hover:text-rose-700 transition-colors duration-300" href="#">Sustainability</a>
+<a class="font-serif text-lg tracking-tight select-none text-neutral-600 font-medium pb-1 hover:text-rose-700 transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-5 text-rose-900">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">search</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity" data-icon="person">person</span>
+<div class="relative cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</div>
+</div>
+</div>
+<div class="bg-neutral-200/20 h-[1px] w-full"></div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden mb-24 px-6">
+<div class="absolute inset-0 z-0">
+<img alt="Editorial lifestyle shot" class="w-full h-full object-cover" data-alt="Elegant woman wearing a dusty rose silk hijab in a sun-drenched minimalist stone courtyard with soft architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzbNNghyIiFbNHYagUibFWYvR3Lvc7W5vbQQoPPApAMomDDoDPU7nJz2LtvYMi_AD4Pf3b4cuBkSU0NKMbVf8LRqapIbSTzjpFDx2WmLvr1MP5WtgV4bhAWUBZV3VL_HtFmDQ90M5iZz7Ew98aCyz2d9P7dT2rfZmMY7K03Wb9zN1qdZHqWDh6AqCSqQnuCKsf5PPfvIgrSKRareD1RHbIyuJbeUhzpyVoj3_HAIfjxHxh0eS9YA81hSkZLQHdGwELuLF5RkJe0PE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-12 gap-6 items-center">
+<div class="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col items-start gap-8">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-primary font-semibold">The Core Collection</span>
+<h1 class="font-headline text-5xl md:text-7xl leading-[1.1] text-on-background tracking-tight">
+                        Elegance in <br/><i class="font-serif italic font-normal">Every Drape</i>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed">
+                        Crafted for the modern woman who values the tactile grace of premium fabrics and the quiet confidence of minimalist design.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 font-label text-sm tracking-widest uppercase hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+                            Shop The Collection
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals: Bento Grid Layout -->
+<section class="max-w-screen-2xl mx-auto px-6 mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl mb-4">New Arrivals</h2>
+<p class="text-on-surface-variant font-body leading-relaxed">Discover our latest seasonal palettes, inspired by the natural tonal shifts of the Mediterranean landscape.</p>
+</div>
+<a class="font-headline text-xl italic text-primary editorial-underline" href="#">View All Pieces</a>
+</div>
+<div class="grid grid-cols-12 gap-4 md:gap-8">
+<!-- Large Card -->
+<div class="col-span-12 md:col-span-7 group cursor-pointer">
+<div class="bg-surface-container-low aspect-[4/5] md:aspect-auto md:h-[700px] overflow-hidden mb-6 relative">
+<img alt="Luxury Hijab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a premium sage green chiffon hijab draped gracefully over a minimalist textured pedestal with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBocF53GC_XTaWK0imG8frCmw022M_d0LJyM0clvX_WJouRoT7hgQSD5ieBSfUVwwQe3OotzeoTlVD2qJsNXeWtGEkSDh1RUXQpRMshEjE-4Nl-x4ye3atbQtuBxKmN_yyiTKEq8wvnIJs6_V5xqDN7lX7wSM5FXrPd46hiiPpqyH8pud4Dl-S2Cowrnjheig3uK0pLtG_iJxKsxYPUiJ5-G0BN0cknJtKxbGk_pyepjX3VDLUK4cwWVnTqR7whDCLC8n6XkrIwO1c"/>
+<div class="absolute top-6 left-6">
+<span class="bg-surface/90 backdrop-blur-md px-4 py-1 font-label text-[10px] tracking-widest uppercase text-on-surface">Limited Edition</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1">Medina Silk in Sage</h3>
+<p class="font-body text-sm text-on-surface-variant uppercase tracking-widest">Premium Chiffon</p>
+</div>
+<span class="font-body text-lg text-primary">$85</span>
+</div>
+</div>
+<!-- Column of smaller cards -->
+<div class="col-span-12 md:col-span-5 flex flex-col gap-12">
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low aspect-square overflow-hidden mb-6 relative">
+<img alt="Dusty Rose Hijab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A woman in a profile view wearing a soft dusty rose silk hijab looking towards a window with warm morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUeYb2LfW6ePZJAc1fj8PTcAF9x9ZZR9iT3AEG9029HjtFyWjFMZQzDcWrD4d65nqob9mVOcXst-YJH66JQcEFyQvhCM6FSQTwDTAVoCq352i1RTAltpAPPqYHzWKgIIbewLurT892MliNKRIBwRfqYRAufFLlwc4RSxBJc8N9KN64YCy3hvDplVRwmiNYzdGwCYANsomcrKoeIR-8RQIOXszH5oMJfBfenh4sd-wrAjyZQ-vs4yBkRXIkCwZ37Q6qakLI7P4zT48"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl mb-1">Desert Rose Modal</h3>
+<p class="font-body text-xs text-on-surface-variant uppercase tracking-widest">Sustainability Line</p>
+</div>
+<span class="font-body text-md text-primary">$65</span>
+</div>
+</div>
+<div class="group cursor-pointer translate-x-0 md:translate-x-[-15%]">
+<div class="bg-surface-container-low aspect-square overflow-hidden mb-6 relative">
+<img alt="Sand Crepe Hijab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detailed texture of sand colored crepe fabric folded elegantly on a cream marble surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuD-SEUSaSFLKeKTTV3_XIhe-WpT98-jATijx8bAwKOlISkwXZ4bZOoXrd-xRJfAklpTurHqGFDua0cvIr0m7lD0aj9D0qP31KUVrVWMEKyLQl-msZSHpG6tThKQYcFKlgfHH8iyHdlZ-zCvc10T0iyq-0l0Qpy3xg_ggvWqySC69A-PjzINbydVI9pK-aA2AcwH_UGGo0jWfoiZ3XzogeuG68Oj3UobHAWRvAF_Qt-kIzvc6DVYF1qO3WgL5YF3qRGnV3Bq4jbG0"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl mb-1">Sand Dune Crepe</h3>
+<p class="font-body text-xs text-on-surface-variant uppercase tracking-widest">Essential Collection</p>
+</div>
+<span class="font-body text-md text-primary">$72</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Section: Asymmetric Editorial -->
+<section class="bg-secondary-container py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-12 gap-12 items-center">
+<div class="col-span-12 lg:col-span-6 relative">
+<div class="relative z-10 w-4/5 ml-auto">
+<img alt="Ethical Sourcing" class="w-full shadow-2xl" data-alt="Hands gently touching raw organic cotton fibers in a sunlit workshop, symbolizing ethical and sustainable sourcing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPqjqVl7MXSHSBqMbprl2vtJMba16hvr6Hl6hoBKJV1zHDsLfXc9uAn6JGM-uwk2BemVp9XgzleZxj7qPdQV1H00ESQiHi7o1BfwxMvRZrECz8IH77k4FDddxUMYTZxxtoQjbdfTJ6Wq_6cYcfu8DSTvE97WZN1QXlv2jsh_ZY5fCPHFkbL0sfJifZ3T-ljDq2gbROMRlNVXegXixT46FDo6yk3PovUWOeIARt7ffgW0t1eo9_6dShmmaU67H9lZQ4pZEvlIVTn0"/>
+</div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-3/5 z-0 bg-secondary/10 aspect-square"></div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-8">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary font-bold">Our Commitment</span>
+<h2 class="font-headline text-5xl leading-tight">Crafted with <br/><i>Conscience</i></h2>
+<p class="font-body text-lg text-on-secondary-container leading-relaxed">
+                        At AL-LATIF, sustainability is not a trend but a tradition. We source 100% biodegradable modal and organic silks, ensuring every piece respects the earth as much as the woman who wears it.
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div>
+<p class="font-headline text-3xl text-secondary mb-2">0%</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-secondary-container">Plastic Packaging</p>
+</div>
+<div>
+<p class="font-headline text-3xl text-secondary mb-2">100%</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-secondary-container">Traceable Fibers</p>
+</div>
+</div>
+<button class="self-start mt-4 bg-secondary text-on-secondary px-8 py-3 font-label text-xs tracking-widest uppercase hover:bg-on-secondary-fixed-variant transition-colors">
+                        Learn Our Process
+                    </button>
+</div>
+</div>
+</section>
+<!-- The Fabric Carousel: Horizontal Rhythm -->
+<section class="py-32">
+<div class="px-6 mb-16 max-w-7xl mx-auto">
+<h2 class="font-headline text-4xl text-center">Touch the Quality</h2>
+</div>
+<div class="flex overflow-x-auto pb-12 gap-8 no-scrollbar snap-x scroll-px-6">
+<div class="flex-none w-72 md:w-96 snap-start ml-6">
+<div class="bg-surface-container-high aspect-[3/4] p-8 flex flex-col justify-end">
+<h4 class="font-headline text-2xl mb-2">Mulberry Silk</h4>
+<p class="font-body text-sm text-on-surface-variant">The pinnacle of luxury with a luminous sheen that catches the light beautifully.</p>
+</div>
+</div>
+<div class="flex-none w-72 md:w-96 snap-start">
+<div class="bg-surface-container-high aspect-[3/5] p-8 flex flex-col justify-start">
+<h4 class="font-headline text-2xl mb-2">Organic Modal</h4>
+<p class="font-body text-sm text-on-surface-variant">Breathable, incredibly soft, and derived from sustainable beechwood forests.</p>
+</div>
+</div>
+<div class="flex-none w-72 md:w-96 snap-start">
+<div class="bg-surface-container-high aspect-[3/4] p-8 flex flex-col justify-end">
+<h4 class="font-headline text-2xl mb-2">Fine Crepe</h4>
+<p class="font-body text-sm text-on-surface-variant">A textured finish that provides a non-slip grip and effortless daily elegance.</p>
+</div>
+</div>
+<div class="flex-none w-72 md:w-96 snap-start">
+<div class="bg-surface-container-high aspect-[3/5] p-8 flex flex-col justify-start">
+<h4 class="font-headline text-2xl mb-2">Turkish Voile</h4>
+<p class="font-body text-sm text-on-surface-variant">Light as air, perfect for layering during warmer climates without adding bulk.</p>
+</div>
+</div>
+<div class="flex-none w-72 md:w-96 snap-start pr-6">
+<div class="bg-surface-container-high aspect-[3/4] p-8 flex flex-col justify-end">
+<h4 class="font-headline text-2xl mb-2">Premium Jersey</h4>
+<p class="font-body text-sm text-on-surface-variant">Four-way stretch and moisture-wicking properties for an active, modern lifestyle.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Journal Hook -->
+<section class="max-w-4xl mx-auto px-6 mb-32 text-center">
+<div class="bg-surface-container-lowest p-16 border border-outline-variant/15">
+<span class="font-label text-xs tracking-[0.3em] uppercase text-primary font-bold mb-6 block">The Journal</span>
+<h2 class="font-headline text-4xl mb-6">Stay Inspired</h2>
+<p class="font-body text-on-surface-variant mb-10 max-w-lg mx-auto">Receive editorial lookbooks, styling tutorials, and early access to our limited drops.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-grow bg-transparent border-b border-outline-variant/40 py-3 px-1 font-body focus:outline-none focus:border-primary transition-colors text-on-background" placeholder="Email Address" type="email"/>
+<button class="font-label text-xs tracking-widest uppercase text-primary font-bold py-3 md:px-6 editorial-underline self-center md:self-end" type="submit">Join Us</button>
+</form>
+</div>
+</section>
+</main>
+<footer class="w-full mt-24 pt-16 pb-8 bg-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto border-t border-neutral-200 pt-16">
+<div class="col-span-1 md:col-span-1">
+<a class="font-serif text-xl italic text-rose-950 block mb-6" href="/">AL-LATIF</a>
+<p class="font-sans text-sm tracking-widest uppercase text-neutral-500 leading-relaxed">
+                    Elevating the everyday through modest luxury and mindful craftsmanship.
+                </p>
+</div>
+<div>
+<h4 class="font-sans text-sm tracking-widest uppercase font-bold text-rose-900 mb-6">Shop</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Collections</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Best Sellers</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Essentials</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans text-sm tracking-widest uppercase font-bold text-rose-900 mb-6">Explore</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Sustainability</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Our Story</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">The Journal</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Care Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-sans text-sm tracking-widest uppercase font-bold text-rose-900 mb-6">Service</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Wholesale</a></li>
+<li><a class="font-sans text-sm tracking-widest uppercase text-neutral-500 hover:text-rose-800 transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 text-center px-8 border-t border-neutral-200 pt-8">
+<p class="font-sans text-sm tracking-widest uppercase text-neutral-500">© 2024 AL-LATIF. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>
